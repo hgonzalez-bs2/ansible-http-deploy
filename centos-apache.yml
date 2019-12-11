@@ -7,15 +7,15 @@
         name: httpd
         state: latest
         
-    - name: install the latest version of libselinux-python
-      yum:
-        name: libselinux-python
-        state: latest
+    #- name: install the latest version of libselinux-python
+      #yum:
+        #name: libselinux-python
+        #state: latest
         
-    - name: install the latest version of libsemanage-python
-      yum:
-        name: libsemanage-python
-        state: latest
+    #- name: install the latest version of libsemanage-python
+      #yum:
+        #name: libsemanage-python
+       # state: latest
         
     - name: install the latest version of firewalld
       yum:
