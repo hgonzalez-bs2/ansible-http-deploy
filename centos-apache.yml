@@ -7,11 +7,6 @@
         name: httpd
         state: latest
         
-    - name: restart httpd
-        service: 
-        name=httpd 
-        state=restarted
-        
     #- name: install the latest version of libselinux-python
       #yum:
         #name: libselinux-python
@@ -38,8 +33,8 @@
         #owner: apache
         #group: apache
         #mode: "u=rw,g=r,o=r"
-        #notify:
-            #-restart httpd
+        notify:
+            -restart httpd
    
     - firewalld:
         service: http
