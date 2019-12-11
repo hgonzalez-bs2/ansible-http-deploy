@@ -4,7 +4,7 @@
   tasks:
     - name: install the latest version of Apache
       package:
-        name: httpd
+        pkg: httpd
         state: latest
         
     #- name: install the latest version of libselinux-python
@@ -19,7 +19,7 @@
         
     - name: install the latest version of firewalld
       package:
-        name: firewalld
+        pkg: firewalld
         state: latest
         
     #- name: create self-signed SSL cert
