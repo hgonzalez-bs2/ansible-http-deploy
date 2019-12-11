@@ -6,7 +6,14 @@
       yum:
         name: httpd
         state: latest
-
+        
+    - name: Install common dependencies
+      yum: name={{ item }} state=installed
+        with_items:
+        - libselinux-python
+        - libsemanage-python
+        - firewalld
+   
     #- name: create self-signed SSL cert
      #command: openssl req -new -nodes -x509 -subj "/C=US/ST=Oregon/L=Portland/O=IT/CN=mydomain.test.com" -days 3650 -keyout /etc/httpd/ssl/server.key -out /etc/httpd/ssl/server.crt -extensions v3_ca creates=/etc/httpd/ssl/server.crt
       #notify:
