@@ -1,5 +1,5 @@
 ---
-- hosts: localhost 
+- hosts: 10.75.12.253 
   sudo: yes
   tasks:
     - name: install the latest version of Apache
@@ -50,3 +50,4 @@
         service: 80/tcp
         permanent: true
         state: enabled
+        immediate: yes
