@@ -4,8 +4,7 @@
   tasks:
     - name: install the latest version of Apache
       package:
-        pkg: httpd
-        state: latest
+        pkg=httpd state=latest
         
     #- name: install the latest version of libselinux-python
       #yum:
@@ -18,9 +17,7 @@
        # state: latest
         
     - name: install the latest version of firewalld
-      package:
-        pkg: firewalld
-        state: latest
+      package: pkg=firewalld state=latest
         
     #- name: create self-signed SSL cert
      #command: openssl req -new -nodes -x509 -subj "/C=US/ST=Oregon/L=Portland/O=IT/CN=mydomain.test.com" -days 3650 -keyout /etc/httpd/ssl/server.key -out /etc/httpd/ssl/server.crt -extensions v3_ca creates=/etc/httpd/ssl/server.crt
