@@ -3,7 +3,7 @@
   sudo: yes
   tasks:
     - name: install the latest version of Apache
-      yum:
+      package:
         name: httpd
         state: latest
         
@@ -18,7 +18,7 @@
        # state: latest
         
     - name: install the latest version of firewalld
-      yum:
+      package:
         name: firewalld
         state: latest
         
