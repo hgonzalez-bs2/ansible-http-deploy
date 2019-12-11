@@ -7,10 +7,10 @@
         name: httpd
         state: latest
 
-    - name: create self-signed SSL cert
-      command: openssl req -new -nodes -x509 -subj "/C=US/ST=Oregon/L=Portland/O=IT/CN=mydomain.test.com" -days 3650 -keyout /etc/httpd/ssl/server.key -out /etc/httpd/ssl/server.crt -extensions v3_ca creates=/etc/httpd/ssl/server.crt
-      notify:
-        -restart httpd
+    #- name: create self-signed SSL cert
+    # command: openssl req -new -nodes -x509 -subj "/C=US/ST=Oregon/L=Portland/O=IT/CN=mydomain.test.com" -days 3650 -keyout /etc/httpd/ssl/server.key -out /etc/httpd/ssl/server.crt -extensions v3_ca creates=/etc/httpd/ssl/server.crt
+    #  notify:
+    #   -restart httpd
 
     - copy:
         src:  index.html
