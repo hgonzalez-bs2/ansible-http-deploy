@@ -17,9 +17,9 @@
         dest: /var/www/html/index.html
         #owner: apache
         #group: apache
-        mode: "u=rw,g=r,o=r"
-        notify:
-            -restart httpd
+        #mode: "u=rw,g=r,o=r"
+        #notify:
+            #-restart httpd
    
     - firewalld:
         service: http
