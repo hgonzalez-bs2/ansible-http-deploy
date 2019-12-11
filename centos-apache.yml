@@ -8,7 +8,8 @@
         state: latest
         
     - name: restart httpd
-        service: httpd 
+        service: 
+        name: httpd 
         state: restarted
         
     #- name: install the latest version of libselinux-python
