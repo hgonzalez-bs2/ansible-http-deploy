@@ -7,9 +7,9 @@
         name: httpd
         state: latest
         
-        - name: restart httpd
-          service: httpd 
-          state: restarted
+    - name: restart httpd
+        service: httpd 
+        state: restarted
         
     #- name: install the latest version of libselinux-python
       #yum:
