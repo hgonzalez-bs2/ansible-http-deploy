@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
     - name: install the latest version of Apache
-      package: pkg=httpd state=latest
+      apt: pkg=httpd state=latest
         
     #- name: install the latest version of libselinux-python
       #yum:
