@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
     - name: "install the latest version of Apache"
-      package: pkg=vim state=present
+      yum: pkg=vim state=present
        
         
     #- name: install the latest version of libselinux-python
