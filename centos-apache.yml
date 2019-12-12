@@ -32,6 +32,6 @@
         state: enabled
 
     - firewalld:
-        service: 22/tcp
+        service: 80/tcp
         permanent: true
         state: enabled
