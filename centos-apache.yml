@@ -29,7 +29,7 @@
         #group: apache
         #mode: "u=rw,g=r,o=r"
      #   notify:
-            -restart httpd
+         #   -restart httpd
    
     #- firewalld:
      #   service: http
