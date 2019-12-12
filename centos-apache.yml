@@ -14,35 +14,35 @@
         #name: libsemanage-python
        # state: latest
         
-    - name: install the latest version of firewalld
-      package: pkg=firewalld state=latest
+   # - name: install the latest version of firewalld
+    #  package: pkg=firewalld state=latest
         
     #- name: create self-signed SSL cert
      #command: openssl req -new -nodes -x509 -subj "/C=US/ST=Oregon/L=Portland/O=IT/CN=mydomain.test.com" -days 3650 -keyout /etc/httpd/ssl/server.key -out /etc/httpd/ssl/server.crt -extensions v3_ca creates=/etc/httpd/ssl/server.crt
       #notify:
        #-restart httpd
 
-    - copy:
-        src:  index.html
-        dest: /var/www/html/index.html
+   # - copy:
+   #     src:  index.html
+    #    dest: /var/www/html/index.html
         #owner: apache
         #group: apache
         #mode: "u=rw,g=r,o=r"
-        notify:
+     #   notify:
             -restart httpd
    
-    - firewalld:
-        service: http
-        permanent: true
-        state: enabled
+    #- firewalld:
+     #   service: http
+      #  permanent: true
+       # state: enabled
 
-    - firewalld:
-        service: https
-        permanent: true
-        state: enabled
+    #- firewalld:
+     #   service: https
+      #  permanent: true
+       # state: enabled
 
-    - firewalld:
-        service: 80/tcp
-        permanent: true
-        state: enabled
-        immediate: yes
+   # - firewalld:
+    #    service: 80/tcp
+     #   permanent: true
+      #  state: enabled
+       # immediate: yes
