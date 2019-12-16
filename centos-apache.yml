@@ -29,7 +29,7 @@
         state: enabled
     
     - firewalld:
-          state: restarted
+          state: present
 
     #- firewalld:
      #   service: 443/tcp
