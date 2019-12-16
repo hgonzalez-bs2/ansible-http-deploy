@@ -29,8 +29,9 @@
         state: enabled
     
     -name: restart firewalld
-       service: firewalld
-       state: restarted
+       service: 
+          name: firewalld
+          state: restarted
 
     #- firewalld:
      #   service: 443/tcp
