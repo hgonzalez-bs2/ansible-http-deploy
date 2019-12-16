@@ -15,8 +15,8 @@
         #owner: apache
         #group: apache
         #mode: "u=rw,g=r,o=r"
-        #notify:
-            #-restart httpd
+        notify:
+            -restart httpd
    
     - firewalld:
         service: http
