@@ -28,7 +28,13 @@
         permanent: true
         state: enabled
 
-    - firewalld:
-        service: 443/tcp
-        permanent: true
-        state: enabled
+    #- firewalld:
+     #   service: 443/tcp
+      #  permanent: true
+       # state: enabled
+
+  - name: restart service firewalld
+    systemd:
+      state: restarted
+      daemon_reload: yes
+      name: firewalld
