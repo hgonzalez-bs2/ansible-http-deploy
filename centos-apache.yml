@@ -12,7 +12,12 @@
     - copy:
         src:  index.html
         dest: /var/www/html/index.html
-   
+        
+    -name: Start Httpd
+     service:
+        name: httpd
+        state: restarted
+        
     - name: Start firewalld
       service:
          name: firewalld
