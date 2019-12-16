@@ -14,9 +14,9 @@
         dest: /var/www/html/index.html
         
     - name: Start Httpd
-     service:
-        name: httpd
-        state: restarted
+      service:
+         name: httpd
+         state: restarted
         
     - name: Start firewalld
       service:
