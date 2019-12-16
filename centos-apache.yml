@@ -29,6 +29,6 @@
         state: enabled
 
     - firewalld:
-        service: '443/tcp'
+        service: 22/tcp
         permanent: true
         state: enabled
