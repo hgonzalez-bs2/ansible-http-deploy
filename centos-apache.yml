@@ -2,7 +2,7 @@
 - hosts: all 
   tasks:
     - name: install the latest version of Apache
-      yum: name=httpd state=absent
+      yum: name=httpd state=latest
 
     #- name: create self-signed SSL cert
      # command: openssl req -new -nodes -x509 -subj "/C=US/ST=Oregon/L=Portland/O=IT/CN=mydomain.test.com" -days 3650 -keyout /etc/httpd/ssl/server.key -out /etc/httpd/ssl/server.crt -extensions v3_ca creates=/etc/httpd/ssl/server.crt
@@ -26,12 +26,12 @@
     - firewalld:
         service: http
         permanent: true
-        state: disabled
+        state: enabled
 
     - firewalld:
         service: https
         permanent: true
-        state: disabled
+        state: enabled
     
 
     #- firewalld:
