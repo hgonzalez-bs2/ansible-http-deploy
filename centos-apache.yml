@@ -28,9 +28,7 @@
         permanent: true
         state: enabled
     
-    - name: restart firewalld
-       service: 
-          name: firewalld
+    - firewalld:
           state: restarted
 
     #- firewalld:
